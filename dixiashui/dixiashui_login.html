@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面</title>
+	<link rel="stylesheet" type="text/css" href="dixiashui.css">
+	<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+</head>
+<body>
+<div>
+<!--顶部-->
+<div id="tools">
+    
+</div>
+<!--顶部标题栏-->	
+<div id="top">
+	<div id="top_bar">
+		<ul>
+			<li><a href="homepage.html">主页</a></li>
+			<li><a href="history.html">历史数据查询</a></li>
+			<li><a href="real.html">实时数据查询</a></li>
+			<li><a href="dixiashui_login.html">用户登录</a></li>
+		</ul>
+	</div>
+</div>
+<!--登录界面-->
+<div id="login">
+    <p><input type="text" class="textbox" placeholder=" 请输入账号" id="username"></p>
+    <br/>
+    <p><input type="password" class="textbox" placeholder=" 请输入密码" id="password"></p>
+    <br/>
+    <p><input type="button" class="submitbutton" value="登录" id="logo"></p>
+    <p style="width: 310px; margin: 0px auto; text-align:right; color:gray;">
+    <a href="#">忘记密码</a></p>
+</div>
+	<!--底部-->
+<div id="bottom">
+	<div id="center">
+		<div id="center_left">
+			<p> 关于我们 | 意见反馈 | 免责声明</p>
+			<p>合作伙伴</p>
+		</div>
+		<div id="center_right">
+			<p>版权所有©计科1401班 何紫伊</p>
+			<p>地址：西安科技大学 5501 </p>
+			<p>联系电话：13484902392</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var btn = document.getElementById("logo");
+		btn.addEventListener("click",function(){
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			$.ajax({  
+			    type: 'GET',  //这里用GET  
+			    url: "http://localhost:18000/user/login?username="+username+"&password="+password,  
+			    data: {},
+			    dataType: 'jsonp',  //类型   
+			    jsonp:'callback',
+			    async: true,  
+			    success: function(result) {
+			    	if(result.Detail.static==1)
+			    		alert("登陆成功");
+			    	else
+			    		alert("登录失败");
+			    	console.log(result);
+			    }
+			});
+		});
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+*{
+	margin: 0px;padding: 0px;
+	font-size: 14px;
+}
+#top{
+	width: 100%;height: 60px;
+	background-color: white;
+}
+#top_bar{
+	margin: 0px auto;
+	overflow: hidden;
+	width: 460px;
+}
+
+#top ul li a{
+	text-decoration: none;
+	color: black;
+}
+#top ul li a:hover{
+	color: red;
+}
+#top ul li{
+	list-style-type: none;
+	float: left;
+	height: 80px;
+	line-height: 80px;
+	margin-right: 50px;
+}
+a:hover{
+	color: red;
+}
+span a{
+	text-decoration: none;
+	color: gray;
+}
+#tools{
+	background-color: #f0f0f0;
+	width: 100%;height: 40px;	
+	border-bottom: 1px solid #EAE6E2;
+}
+
+#login{
+	width: 600px;
+	height:300px;
+	overflow: hidden;
+	margin: 0px auto;
+	text-align: center;
+}
+#login a{
+	text-decoration: none;
+	color: black;
+}
+.textbox{
+	width: 300px;height: 40px;
+	padding-left: 10px;
+	border-radius: 5px;border: 1px solid gray;
+}
+.submitbutton{
+	background-color: #f0184d;color: white;
+	width: 310px;height: 40px;
+	border: 1px solid gray;
+}
+
+#login{
+	width: 100%;
+	overflow: hidden;
+	background-color:#f0f0f0; 	
+	padding-top: 35px;
+}
+#login ul{
+	list-style-type: none;
+	padding-bottom: 80px;
+}
+#login ul li{
+	background-color: white;
+	width: 1000px;
+	margin: 0px auto;
+	overflow: hidden;
+	margin-top: 15px;
+	padding: 20px;
+}
+
+#bottom{
+	background-color: #323333;
+	width: 100%;
+}
+#center{
+	width: 800px;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 30px;
+	line-height: 40px;
+}
+#center_left{
+	float: left;
+	width: 350px;
+	color: white;
+}
+#center_right{
+	float: left;
+	margin-left: 150px;
+	color: gray;
+}
+
+table{
+	width: 700px;
+	height: 220px;
+	border: 1px solid #CCC;
+	margin:0px auto;
+}
+td,th{
+	border:1px solid #CCC;
+	font-size: 20px;
+}
+caption{
+	font-size: 20px;
+	font-weight: bold;
+}
